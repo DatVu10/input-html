@@ -427,4 +427,852 @@ header nav a:hover {
     display: block;
 }
 
-.btn-secondary:hover {\n    background-color: #B8A894;\n    color: #FFF;\n}\n\n/* ============ CART PAGE ============ */\n#cart-container {\n    padding: 50px;\n    max-width: 1200px;\n    margin: 0 auto;\n}\n\n.empty-cart {\n    text-align: center;\n    padding: 100px 50px;\n    background: #F7F3EC;\n    border-radius: 10px;\n    border: 1px solid #D8CEC1;\n}\n\n.empty-cart h2 {\n    font-family: 'Cormorant Garamond', serif;\n    font-size: 36px;\n    margin: 0 0 15px;\n    color: #2B211C;\n}\n\n.empty-cart p {\n    font-size: 16px;\n    color: #6B5A4B;\n    margin: 0 0 30px;\n}\n\n.empty-cart .btn-primary {\n    display: inline-block;\n    text-decoration: none;\n}\n\n.cart-content {\n    display: grid;\n    grid-template-columns: 1fr 350px;\n    gap: 40px;\n}\n\n.cart-items {\n    background: #F7F3EC;\n    border: 1px solid #D8CEC1;\n    border-radius: 10px;\n    padding: 30px;\n}\n\n.cart-item {\n    display: grid;\n    grid-template-columns: 120px 1fr 150px 120px 50px;\n    gap: 20px;\n    align-items: center;\n    padding: 25px;\n    border-bottom: 1px solid #D8CEC1;\n    transition: background-color 0.3s ease;\n}\n\n.cart-item:hover {\n    background-color: #E8E1D6;\n}\n\n.cart-item:last-child {\n    border-bottom: none;\n}\n\n.cart-item-image {\n    width: 120px;\n    height: 120px;\n    border-radius: 8px;\n    overflow: hidden;\n    background: #FFF;\n}\n\n.cart-item-image img {\n    width: 100%;\n    height: 100%;\n    object-fit: cover;\n}\n\n.cart-item-info h3 {\n    font-family: 'Cormorant Garamond', serif;\n    font-size: 18px;\n    margin: 0 0 8px;\n    color: #2B211C;\n}\n\n.cart-item-category {\n    font-size: 12px;\n    color: #6B5A4B;\n    text-transform: uppercase;\n    margin: 0 0 5px;\n    letter-spacing: 1px;\n}\n\n.cart-item-price {\n    font-size: 14px;\n    color: #B89B5E;\n    font-weight: 600;\n    margin: 0;\n}\n\n.cart-item-quantity label {\n    display: block;\n    font-size: 12px;\n    color: #6B5A4B;\n    margin-bottom: 8px;\n    font-weight: 600;\n    text-transform: uppercase;\n}\n\n.cart-item-quantity .quantity-controls {\n    width: 100%;\n    max-width: 150px;\n}\n\n.cart-item-total p {\n    font-size: 16px;\n    font-weight: 700;\n    color: #B89B5E;\n    margin: 0;\n}\n\n.btn-remove {\n    background: none;\n    border: none;\n    color: #D9534F;\n    font-size: 18px;\n    cursor: pointer;\n    transition: color 0.3s ease;\n    padding: 8px;\n}\n\n.btn-remove:hover {\n    color: #C9302C;\n}\n\n.cart-summary {\n    background: #F7F3EC;\n    border: 1px solid #D8CEC1;\n    border-radius: 10px;\n    padding: 30px;\n    position: sticky;\n    top: 30px;\n    height: fit-content;\n}\n\n.summary-row {\n    display: flex;\n    justify-content: space-between;\n    padding: 15px 0;\n    border-bottom: 1px solid #D8CEC1;\n    font-size: 16px;\n    color: #6B5A4B;\n}\n\n.summary-row.total {\n    border: none;\n    font-size: 20px;\n    font-weight: 700;\n    color: #B89B5E;\n    padding: 20px 0;\n    margin-bottom: 20px;\n}\n\n.cart-summary .btn-primary,\n.cart-summary .btn-secondary {\n    width: 100%;\n    margin-bottom: 10px;\n}\n\n/* ============ SUMMER COLLECTION ============ */\n.summerCollection{\n    position: relative;\n    width: 100%;\n}\n\n.sc-img img{\n    width: 100%;\n}\n\n.sc-text{\n    position: absolute;\n    top: 200px;\n    left: 50px;\n    line-height: 50px;\n}\n\n.sc-text h1{\n    font-family: 'Cormorant Garamond', serif;\n    font-size: 80px;\n    font-weight: 500;\n    color: #2B211C;\n    margin-bottom: 60px;\n}\n\n.sc-text p{\n    width: 750px;\n    font-family: 'Inter', sans-serif;\n    font-size: 18px;\n    line-height: 1.8;\n    color: #5E5147;\n}\n\n.sc-text button{\n    margin-top: 20px;\n    padding: 20px 55px;\n    background: #4E342E;\n    color: #F8F5F0;\n    border: none;\n    font-family: 'Inter', sans-serif;\n    letter-spacing: 0.2em;\n    cursor: pointer;\n    transition: background 0.3s ease;\n}\n\n.sc-text button:hover {\n    background: #3A2A22;\n}\n\n/* ============ BEST SELLERS ============ */\n.best-sellers {\n    padding: 0 50px;\n}\n\n.bs-head h1{\n    margin-top: 40px;\n    margin-bottom: 40px;\n    text-align: center;\n    font-family: 'Cormorant Garamond', serif;\n    font-size: 30px;\n    color: #4E342E;\n}\n\n.bs-cards {\n    width: 100%;\n    display: grid;\n    grid-template-columns: 1fr 1fr 1fr 1fr;\n    gap: 20px;\n}\n\n.bs-cards img {\n    width: 100%;\n    margin-bottom: 15px;\n    cursor: pointer;\n    transition: transform 0.3s ease;\n}\n\n.bs-cards img:hover {\n    transform: scale(1.05);\n}\n\n.bs-cards p {\n    font-size: 15px;\n    line-height: 0.8;\n    font-family: 'Inter', sans-serif;\n    cursor: pointer;\n    color: #2B211C;\n    transition: color 0.3s ease;\n}\n\n.bs-cards p:hover {\n    color: #B89B5E;\n}\n\n/* ============ THE LOOK ============ */\n.the-look1, .the-look2{\n    display: grid;\n    grid-template-columns: 1fr 1fr;    \n}\n\n.the-look1 {\n    margin-top: 40px;\n}\n\n.the-look2{\n    margin-top: 0px;\n}\n\n.look-model1 img, .look-model2 img {\n    width: 100%;\n    max-height: 1200px;\n    height: 100%;\n}\n\n.look-content1, .look-content2 {\n    max-height: 1200px;\n    display: grid;\n    grid-template-rows: 1fr 5fr 2fr 1fr;\n    background-color: #EEEAE6;\n    text-align: center;\n}\n\n.product-slider1, .product-slider2 {\n    margin-top: 150px;\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n    padding: 0px 30px;\n}\n\n.product-card1 img, .product-card2 img {\n    width: 100%;\n    max-width: 400px;\n    text-align: center;\n}\n\n.tl1, .tl2 {\n    color: #4E342E;\n    font-weight: 500;\n    font-size: 50px;\n    font-family: 'Cormorant Garamond', serif;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.arrow-left1, .arrow-right1, .arrow-left2, .arrow-right2{\n    font-family: 'Cormorant Garamond', serif;\n    width: 48px;\n    height: 48px;\n    border-radius: 50%;\n    border: none;\n    background-color: #F8F5F0;\n    font-size: 40px;\n    cursor: pointer;\n    color: #2b211c;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding-bottom: 10px;\n    transition: all 0.3s ease;\n}\n\n.arrow-left1:hover, .arrow-right1:hover, .arrow-left2:hover, .arrow-right2:hover {\n    background-color: #B8A894;\n    color: #FFF;\n}\n\n.product-card1 h3, .product-card1 p, .product-card2 h3, .product-card2 p {\n    font-size: 20px;\n    font-family: 'Cormorant Garamond', serif;\n}\n\n.product-card1 h3, .product-card2 h3 {\n    margin-top: 40px;\n    margin-bottom: 0px;\n    color: #2B211C;\n}\n\n.product-card1 p, .product-card2 p {\n    margin: 0px auto; \n    padding-top: 10px;\n    color: #B29A86;\n}\n\n.view-btn1, .view-btn2 {\n    margin: auto;\n    width: 250px;\n    height: 65px;\n    font-size: 25px;\n    font-family: 'Cormorant Garamond', serif;  \n    background-color: transparent;\n    border: 1px solid #2B211C;\n    border-radius: 5px;\n    margin-bottom: 80px;\n    cursor: pointer;\n    transition: all 0.3s ease;\n}\n\n.view-btn1:hover, .view-btn2:hover {\n    background-color: #2B211C;\n    color: #F8F5F0;\n}\n\n/* ============ OUR STORY ============ */\n.our-story {\n    margin-top: 0px;\n    text-align: center;\n    padding: 0 200px;\n    padding-top: 90px;\n}\n\n.os-content h1{\n    font-size: 30px;\n    font-family: 'Cormorant Garamond', serif;\n    color: #4E342E;\n}\n\n.os-content p{\n    padding-top: 20px;\n    font-size: 20px;\n    font-family: 'Cormorant Garamond', serif;\n    color: #5E5147;\n    line-height: 1.8;\n}\n\n.os-img img {\n    padding-top: 50px;\n    max-width: 500px;\n    max-height: 600px;\n    width: 100%;\n    cursor: pointer;\n    transition: transform 0.3s ease;\n}\n\n.os-img img:hover {\n    transform: scale(1.05);\n}\n\n.os-discover{\n    font-size: 20px;\n    font-family: 'Cormorant Garamond', serif;\n    margin-top: 20px;\n    color: #B29A86;\n    cursor: pointer;\n    margin-bottom: 90px;\n    transition: color 0.3s ease;\n}\n\n.os-discover:hover {\n    color: #B89B5E;\n}\n\n/* ============ CONTACT & FOOTER ============ */\n.contact {\n    display: flex;\n    padding: 40px 80px;\n    color: #F8F5F0;\n    background-color: #4E342E;\n}\n\n.more-info {\n    display: flex;\n    gap: 50px;\n    text-align: left;\n    padding-left: 0px;\n}\n\n.more-info h1{\n    font-size: 25px;\n    font-family: 'Cormorant Garamond', serif;\n}\n\n.more-info ul{\n    list-style-type: none;\n    line-height: 3;\n    padding-left: 0px;\n}\n\n.more-info ul li{\n    font-size: 18px;\n    font-family: 'Cormorant Garamond', serif;\n}\n\n.more-info a {\n    text-decoration: none;\n    color: #F8F5F0;\n    transition: color 0.3s ease;\n}\n\n.more-info a:hover {\n    color: #B89B5E;\n}\n\n.subscribe {\n    width: 38%;\n    display: flex;\n    flex-direction: column;\n    padding-right: 90px;\n    margin-right: 0px;\n}\n\n.subscribe h1 {\n    font-family: 'Cormorant Garamond', serif;\n    font-weight: 400;\n    color: #F8F5F0;\n    font-size: 35px;\n    margin-bottom: 20px;\n}\n\n.subscribe p {\n    font-family: 'Cormorant Garamond', serif;\n    font-size: 18px;\n    line-height: 1.4;\n    max-width: 650px;\n}\n\n.subscribe-form {\n    margin-top: 10px;\n    display: flex;\n    align-items: center;\n    border-bottom: 1px solid rgba(248,245,240,0.8);\n    max-width: 620px;\n}\n\n.subscribe-form input {\n    flex: 1;\n    background: transparent;\n    border: none;\n    outline: none;\n    padding: 15px 0;\n    font-size: 18px;\n    font-family: 'Cormorant Garamond', serif;\n    color: #F8F5F0;\n}\n\n.subscribe-form input::placeholder {\n    color: #F8F5F0;\n}\n\n.subscribe-form button {\n    background: transparent;\n    border: none;\n    color: #F8F5F0;\n    font-size: 18px;\n    cursor: pointer;\n    transition: color 0.3s ease;\n}\n\n.subscribe-form button:hover {\n    color: #B89B5E;\n}\n\n.privacy-text {\n    margin-top: 35px;\n    font-size: 16px;\n    line-height: 1.6;\n}\n\n.privacy-text a {\n    color: #F8F5F0;\n    transition: color 0.3s ease;\n}\n\n.privacy-text a:hover {\n    color: #B89B5E;\n}\n\n.footer {\n    text-align: center;\n    padding: 10px 0;\n    color: #2B211C;\n    background-color: #F8F5F0;\n    border-top: 1px solid #D8CEC1;\n}\n\n/* ============ RESPONSIVE DESIGN ============ */\n/* iPad / Tablet responsive */\n@media (max-width: 1024px) {\n    header {\n        padding: 0 30px;\n        gap: 15px;\n        height: 120px;\n    }\n\n    header img {\n        max-width: 260px;\n    }\n\n    .head-left,\n    .head-right {\n        font-size: 16px;\n        gap: 25px;\n    }\n\n    .summerCollection {\n        overflow: hidden;\n    }\n\n    .sc-img img {\n        height: 650px;\n        object-fit: cover;\n        object-position: center;\n    }\n\n    .sc-text {\n        top: 120px;\n        left: 40px;\n        line-height: 1.2;\n    }\n\n    .sc-text h1 {\n        font-size: 60px;\n        margin-bottom: 35px;\n    }\n\n    .sc-text p {\n        width: 520px;\n        font-size: 16px;\n        line-height: 1.7;\n    }\n\n    .sc-text button {\n        padding: 18px 45px;\n        font-size: 14px;\n    }\n\n    .best-sellers {\n        padding: 0 30px;\n    }\n\n    .bs-cards {\n        grid-template-columns: 1fr 1fr;\n        gap: 25px;\n    }\n\n    #products-grid {\n        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));\n        gap: 20px;\n        padding: 30px;\n    }\n\n    .product-detail {\n        grid-template-columns: 1fr;\n        gap: 40px;\n    }\n\n    .cart-content {\n        grid-template-columns: 1fr;\n    }\n\n    .cart-summary {\n        position: static;\n    }\n\n    .cart-item {\n        grid-template-columns: 100px 1fr 100px;\n        gap: 15px;\n    }\n\n    .cart-item-quantity {\n        display: none;\n    }\n\n    .product-info h1 {\n        font-size: 36px;\n    }\n\n    .the-look1,\n    .the-look2 {\n        grid-template-columns: 1fr 1fr;\n    }\n\n    .look-model1 img,\n    .look-model2 img {\n        height: 850px;\n        object-fit: cover;\n    }\n\n    .look-content1,\n    .look-content2 {\n        height: 850px;\n        grid-template-rows: 1fr 4fr 1fr 1fr;\n    }\n\n    .tl1,\n    .tl2 {\n        font-size: 42px;\n    }\n\n    .product-slider1,\n    .product-slider2 {\n        margin-top: 60px;\n        padding: 0 20px;\n    }\n\n    .product-card1 img,\n    .product-card2 img {\n        max-width: 280px;\n    }\n\n    .view-btn1,\n    .view-btn2 {\n        width: 210px;\n        height: 58px;\n        font-size: 22px;\n        margin-bottom: 50px;\n    }\n\n    .our-story {\n        padding: 70px 80px 0;\n    }\n\n    .os-content p {\n        font-size: 18px;\n    }\n\n    .contact {\n        flex-direction: column;\n        padding: 40px 50px;\n    }\n\n    .subscribe {\n        width: 100%;\n        padding-right: 0;\n        margin-bottom: 35px;\n    }\n\n    .more-info {\n        width: 100%;\n        gap: 40px;\n        flex-wrap: wrap;\n    }\n}\n\n/* Smaller tablet / iPad portrait */\n@media (max-width: 768px) {\n    header {\n        height: auto;\n        padding: 25px 20px;\n        flex-direction: column;\n    }\n\n    .head-left,\n    .head-right {\n        justify-content: center;\n        flex-wrap: wrap;\n        gap: 20px;\n        font-size: 15px;\n    }\n\n    header img {\n        max-width: 220px;\n    }\n\n    .page-header {\n        padding: 40px 20px;\n    }\n\n    .page-header h1 {\n        font-size: 36px;\n    }\n\n    .sc-img img {\n        height: 600px;\n    }\n\n    .sc-text {\n        top: 90px;\n        left: 25px;\n        right: 25px;\n    }\n\n    .sc-text h1 {\n        font-size: 48px;\n        margin-bottom: 25px;\n    }\n\n    .sc-text p {\n        width: 100%;\n        font-size: 15px;\n    }\n\n    .bs-cards {\n        grid-template-columns: 1fr 1fr;\n    }\n\n    #products-grid {\n        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));\n        gap: 15px;\n        padding: 20px;\n    }\n\n    .product-card h3 {\n        font-size: 14px;\n    }\n\n    .product-price {\n        font-size: 14px;\n    }\n\n    #product-detail-container {\n        padding: 20px;\n    }\n\n    .product-detail {\n        padding: 20px;\n    }\n\n    .gallery-btn {\n        width: 40px;\n        height: 40px;\n        font-size: 18px;\n    }\n\n    .product-info h1 {\n        font-size: 28px;\n    }\n\n    .cart-item {\n        grid-template-columns: 80px 1fr;\n        gap: 10px;\n    }\n\n    .cart-item-image {\n        width: 80px;\n        height: 80px;\n        grid-column: span 2;\n    }\n\n    .cart-item-quantity,\n    .cart-item-total {\n        display: none;\n    }\n\n    .the-look1,\n    .the-look2 {\n        grid-template-columns: 1fr;\n    }\n\n    .look-model1,\n    .look-model2 {\n        order: 1;\n    }\n\n    .look-content1,\n    .look-content2 {\n        order: 2;\n        height: auto;\n        padding: 50px 20px;\n    }\n\n    .product-slider1,\n    .product-slider2 {\n        margin-top: 30px;\n    }\n\n    .product-card1 img,\n    .product-card2 img {\n        max-width: 260px;\n    }\n\n    .our-story {\n        padding: 60px 30px 0;\n    }\n\n    .contact {\n        padding: 35px 30px;\n    }\n\n    .more-info {\n        flex-direction: column;\n        gap: 20px;\n    }\n}\n
+.btn-secondary:hover {
+    background-color: #B8A894;
+    color: #FFF;
+}
+
+/* ============ CART PAGE ============ */
+#cart-container {
+    padding: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.empty-cart {
+    text-align: center;
+    padding: 100px 50px;
+    background: #F7F3EC;
+    border-radius: 10px;
+    border: 1px solid #D8CEC1;
+}
+
+.empty-cart h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    margin: 0 0 15px;
+    color: #2B211C;
+}
+
+.empty-cart p {
+    font-size: 16px;
+    color: #6B5A4B;
+    margin: 0 0 30px;
+}
+
+.empty-cart .btn-primary {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.cart-content {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 40px;
+}
+
+.cart-items {
+    background: #F7F3EC;
+    border: 1px solid #D8CEC1;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.cart-item {
+    display: grid;
+    grid-template-columns: 120px 1fr 150px 120px 50px;
+    gap: 20px;
+    align-items: center;
+    padding: 25px;
+    border-bottom: 1px solid #D8CEC1;
+    transition: background-color 0.3s ease;
+}
+
+.cart-item:hover {
+    background-color: #E8E1D6;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.cart-item-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #FFF;
+}
+
+.cart-item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cart-item-info h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    margin: 0 0 8px;
+    color: #2B211C;
+}
+
+.cart-item-category {
+    font-size: 12px;
+    color: #6B5A4B;
+    text-transform: uppercase;
+    margin: 0 0 5px;
+    letter-spacing: 1px;
+}
+
+.cart-item-price {
+    font-size: 14px;
+    color: #B89B5E;
+    font-weight: 600;
+    margin: 0;
+}
+
+.cart-item-quantity label {
+    display: block;
+    font-size: 12px;
+    color: #6B5A4B;
+    margin-bottom: 8px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.cart-item-quantity .quantity-controls {
+    width: 100%;
+    max-width: 150px;
+}
+
+.cart-item-total p {
+    font-size: 16px;
+    font-weight: 700;
+    color: #B89B5E;
+    margin: 0;
+}
+
+.btn-remove {
+    background: none;
+    border: none;
+    color: #D9534F;
+    font-size: 18px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    padding: 8px;
+}
+
+.btn-remove:hover {
+    color: #C9302C;
+}
+
+.cart-summary {
+    background: #F7F3EC;
+    border: 1px solid #D8CEC1;
+    border-radius: 10px;
+    padding: 30px;
+    position: sticky;
+    top: 30px;
+    height: fit-content;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid #D8CEC1;
+    font-size: 16px;
+    color: #6B5A4B;
+}
+
+.summary-row.total {
+    border: none;
+    font-size: 20px;
+    font-weight: 700;
+    color: #B89B5E;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+.cart-summary .btn-primary,
+.cart-summary .btn-secondary {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* ============ SUMMER COLLECTION ============ */
+.summerCollection {
+    position: relative;
+    width: 100%;
+}
+
+.sc-img img {
+    width: 100%;
+}
+
+.sc-text {
+    position: absolute;
+    top: 200px;
+    left: 50px;
+    line-height: 50px;
+}
+
+.sc-text h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 80px;
+    font-weight: 500;
+    color: #2B211C;
+    margin-bottom: 60px;
+}
+
+.sc-text p {
+    width: 750px;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #5E5147;
+}
+
+.sc-text button {
+    margin-top: 20px;
+    padding: 20px 55px;
+    background: #4E342E;
+    color: #F8F5F0;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.2em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.sc-text button:hover {
+    background: #3A2A22;
+}
+
+/* ============ BEST SELLERS ============ */
+.best-sellers {
+    padding: 0 50px;
+}
+
+.bs-head h1 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    color: #4E342E;
+}
+
+.bs-cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.bs-cards img {
+    width: 100%;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.bs-cards img:hover {
+    transform: scale(1.05);
+}
+
+.bs-cards p {
+    font-size: 15px;
+    line-height: 0.8;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    color: #2B211C;
+    transition: color 0.3s ease;
+}
+
+.bs-cards p:hover {
+    color: #B89B5E;
+}
+
+/* ============ THE LOOK ============ */
+.the-look1, .the-look2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.the-look1 {
+    margin-top: 40px;
+}
+
+.the-look2 {
+    margin-top: 0px;
+}
+
+.look-model1 img, .look-model2 img {
+    width: 100%;
+    max-height: 1200px;
+    height: 100%;
+}
+
+.look-content1, .look-content2 {
+    max-height: 1200px;
+    display: grid;
+    grid-template-rows: 1fr 5fr 2fr 1fr;
+    background-color: #EEEAE6;
+    text-align: center;
+}
+
+.product-slider1, .product-slider2 {
+    margin-top: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 30px;
+}
+
+.product-card1 img, .product-card2 img {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.tl1, .tl2 {
+    color: #4E342E;
+    font-weight: 500;
+    font-size: 50px;
+    font-family: 'Cormorant Garamond', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow-left1, .arrow-right1, .arrow-left2, .arrow-right2 {
+    font-family: 'Cormorant Garamond', serif;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    background-color: #F8F5F0;
+    font-size: 40px;
+    cursor: pointer;
+    color: #2b211c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.arrow-left1:hover, .arrow-right1:hover, .arrow-left2:hover, .arrow-right2:hover {
+    background-color: #B8A894;
+    color: #FFF;
+}
+
+.product-card1 h3, .product-card1 p, .product-card2 h3, .product-card2 p {
+    font-size: 20px;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.product-card1 h3, .product-card2 h3 {
+    margin-top: 40px;
+    margin-bottom: 0px;
+    color: #2B211C;
+}
+
+.product-card1 p, .product-card2 p {
+    margin: 0px auto;
+    padding-top: 10px;
+    color: #B29A86;
+}
+
+.view-btn1, .view-btn2 {
+    margin: auto;
+    width: 250px;
+    height: 65px;
+    font-size: 25px;
+    font-family: 'Cormorant Garamond', serif;
+    background-color: transparent;
+    border: 1px solid #2B211C;
+    border-radius: 5px;
+    margin-bottom: 80px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.view-btn1:hover, .view-btn2:hover {
+    background-color: #2B211C;
+    color: #F8F5F0;
+}
+
+/* ============ OUR STORY ============ */
+.our-story {
+    margin-top: 0px;
+    text-align: center;
+    padding: 0 200px;
+    padding-top: 90px;
+}
+
+.os-content h1 {
+    font-size: 30px;
+    font-family: 'Cormorant Garamond', serif;
+    color: #4E342E;
+}
+
+.os-content p {
+    padding-top: 20px;
+    font-size: 20px;
+    font-family: 'Cormorant Garamond', serif;
+    color: #5E5147;
+    line-height: 1.8;
+}
+
+.os-img img {
+    padding-top: 50px;
+    max-width: 500px;
+    max-height: 600px;
+    width: 100%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.os-img img:hover {
+    transform: scale(1.05);
+}
+
+.os-discover {
+    font-size: 20px;
+    font-family: 'Cormorant Garamond', serif;
+    margin-top: 20px;
+    color: #B29A86;
+    cursor: pointer;
+    margin-bottom: 90px;
+    transition: color 0.3s ease;
+}
+
+.os-discover:hover {
+    color: #B89B5E;
+}
+
+/* ============ CONTACT & FOOTER ============ */
+.contact {
+    display: flex;
+    padding: 40px 80px;
+    color: #F8F5F0;
+    background-color: #4E342E;
+}
+
+.more-info {
+    display: flex;
+    gap: 50px;
+    text-align: left;
+    padding-left: 0px;
+}
+
+.more-info h1 {
+    font-size: 25px;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.more-info ul {
+    list-style-type: none;
+    line-height: 3;
+    padding-left: 0px;
+}
+
+.more-info ul li {
+    font-size: 18px;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.more-info a {
+    text-decoration: none;
+    color: #F8F5F0;
+    transition: color 0.3s ease;
+}
+
+.more-info a:hover {
+    color: #B89B5E;
+}
+
+.subscribe {
+    width: 38%;
+    display: flex;
+    flex-direction: column;
+    padding-right: 90px;
+    margin-right: 0px;
+}
+
+.subscribe h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    color: #F8F5F0;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.subscribe p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    line-height: 1.4;
+    max-width: 650px;
+}
+
+.subscribe-form {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(248, 245, 240, 0.8);
+    max-width: 620px;
+}
+
+.subscribe-form input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 15px 0;
+    font-size: 18px;
+    font-family: 'Cormorant Garamond', serif;
+    color: #F8F5F0;
+}
+
+.subscribe-form input::placeholder {
+    color: #F8F5F0;
+}
+
+.subscribe-form button {
+    background: transparent;
+    border: none;
+    color: #F8F5F0;
+    font-size: 18px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.subscribe-form button:hover {
+    color: #B89B5E;
+}
+
+.privacy-text {
+    margin-top: 35px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.privacy-text a {
+    color: #F8F5F0;
+    transition: color 0.3s ease;
+}
+
+.privacy-text a:hover {
+    color: #B89B5E;
+}
+
+.footer {
+    text-align: center;
+    padding: 10px 0;
+    color: #2B211C;
+    background-color: #F8F5F0;
+    border-top: 1px solid #D8CEC1;
+}
+
+/* ============ RESPONSIVE DESIGN ============ */
+/* iPad / Tablet responsive */
+@media (max-width: 1024px) {
+    header {
+        padding: 0 30px;
+        gap: 15px;
+        height: 120px;
+    }
+
+    header img {
+        max-width: 260px;
+    }
+
+    .head-left,
+    .head-right {
+        font-size: 16px;
+        gap: 25px;
+    }
+
+    .summerCollection {
+        overflow: hidden;
+    }
+
+    .sc-img img {
+        height: 650px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .sc-text {
+        top: 120px;
+        left: 40px;
+        line-height: 1.2;
+    }
+
+    .sc-text h1 {
+        font-size: 60px;
+        margin-bottom: 35px;
+    }
+
+    .sc-text p {
+        width: 520px;
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .sc-text button {
+        padding: 18px 45px;
+        font-size: 14px;
+    }
+
+    .best-sellers {
+        padding: 0 30px;
+    }
+
+    .bs-cards {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+
+    #products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 20px;
+        padding: 30px;
+    }
+
+    .product-detail {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .cart-content {
+        grid-template-columns: 1fr;
+    }
+
+    .cart-summary {
+        position: static;
+    }
+
+    .cart-item {
+        grid-template-columns: 100px 1fr 100px;
+        gap: 15px;
+    }
+
+    .cart-item-quantity {
+        display: none;
+    }
+
+    .product-info h1 {
+        font-size: 36px;
+    }
+
+    .the-look1,
+    .the-look2 {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .look-model1 img,
+    .look-model2 img {
+        height: 850px;
+        object-fit: cover;
+    }
+
+    .look-content1,
+    .look-content2 {
+        height: 850px;
+        grid-template-rows: 1fr 4fr 1fr 1fr;
+    }
+
+    .tl1,
+    .tl2 {
+        font-size: 42px;
+    }
+
+    .product-slider1,
+    .product-slider2 {
+        margin-top: 60px;
+        padding: 0 20px;
+    }
+
+    .product-card1 img,
+    .product-card2 img {
+        max-width: 280px;
+    }
+
+    .view-btn1,
+    .view-btn2 {
+        width: 210px;
+        height: 58px;
+        font-size: 22px;
+        margin-bottom: 50px;
+    }
+
+    .our-story {
+        padding: 70px 80px 0;
+    }
+
+    .os-content p {
+        font-size: 18px;
+    }
+
+    .contact {
+        flex-direction: column;
+        padding: 40px 50px;
+    }
+
+    .subscribe {
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 35px;
+    }
+
+    .more-info {
+        width: 100%;
+        gap: 40px;
+        flex-wrap: wrap;
+    }
+}
+
+/* Smaller tablet / iPad portrait */
+@media (max-width: 768px) {
+    header {
+        height: auto;
+        padding: 25px 20px;
+        flex-direction: column;
+    }
+
+    .head-left,
+    .head-right {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        font-size: 15px;
+    }
+
+    header img {
+        max-width: 220px;
+    }
+
+    .page-header {
+        padding: 40px 20px;
+    }
+
+    .page-header h1 {
+        font-size: 36px;
+    }
+
+    .sc-img img {
+        height: 600px;
+    }
+
+    .sc-text {
+        top: 90px;
+        left: 25px;
+        right: 25px;
+    }
+
+    .sc-text h1 {
+        font-size: 48px;
+        margin-bottom: 25px;
+    }
+
+    .sc-text p {
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .bs-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .product-card h3 {
+        font-size: 14px;
+    }
+
+    .product-price {
+        font-size: 14px;
+    }
+
+    #product-detail-container {
+        padding: 20px;
+    }
+
+    .product-detail {
+        padding: 20px;
+    }
+
+    .gallery-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .product-info h1 {
+        font-size: 28px;
+    }
+
+    .cart-item {
+        grid-template-columns: 80px 1fr;
+        gap: 10px;
+    }
+
+    .cart-item-image {
+        width: 80px;
+        height: 80px;
+        grid-column: span 2;
+    }
+
+    .cart-item-quantity,
+    .cart-item-total {
+        display: none;
+    }
+
+    .the-look1,
+    .the-look2 {
+        grid-template-columns: 1fr;
+    }
+
+    .look-model1,
+    .look-model2 {
+        order: 1;
+    }
+
+    .look-content1,
+    .look-content2 {
+        order: 2;
+        height: auto;
+        padding: 50px 20px;
+    }
+
+    .product-slider1,
+    .product-slider2 {
+        margin-top: 30px;
+    }
+
+    .product-card1 img,
+    .product-card2 img {
+        max-width: 260px;
+    }
+
+    .our-story {
+        padding: 60px 30px 0;
+    }
+
+    .contact {
+        padding: 35px 30px;
+    }
+
+    .more-info {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
