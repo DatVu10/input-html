@@ -1,0 +1,430 @@
+/* ============ GENERAL STYLES ============ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F8F5F0;
+    font-family: 'Inter', sans-serif;
+    color: #2B211C;
+}
+
+/* ============ HEADER ============ */
+header {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    gap: 20px;
+    padding: 0px 50px;
+    align-items: center;
+    height: 150px;
+    background-color: #F8F5F0;
+}
+
+header img {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #2B211C;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #B8A894;
+}
+
+.head-left {
+    font-size: 20px;
+    display: flex;
+    gap: 50px;
+    justify-content: left;
+    flex: 1;
+}
+
+.head-right {
+    font-size: 20px;
+    display: flex;
+    gap: 30px;
+    justify-content: right;
+    flex: 1;
+}
+
+/* ============ PAGE HEADER ============ */
+.page-header {
+    text-align: center;
+    padding: 60px 50px;
+    background-color: #EEEAE6;
+    border-bottom: 1px solid #D8CEC1;
+}
+
+.page-header h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    color: #2B211C;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.page-header p {
+    font-size: 18px;
+    color: #6B5A4B;
+    font-weight: 300;
+}
+
+/* ============ NOTIFICATION ============ */
+.notification {
+    position: fixed;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #3A2A22;
+    color: #F8F5F0;
+    padding: 15px 30px;
+    border-radius: 5px;
+    transition: bottom 0.3s ease;
+    z-index: 1000;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.notification.show {
+    bottom: 30px;
+}
+
+/* ============ PRODUCT GRID ============ */
+#products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 50px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background: #F7F3EC;
+    border: 1px solid #D8CEC1;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    background: #FFF;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
+.product-card h3 {
+    font-size: 18px;
+    font-family: 'Cormorant Garamond', serif;
+    padding: 15px 20px 0;
+    margin: 0;
+    color: #2B211C;
+    font-weight: 500;
+}
+
+.product-price {
+    font-size: 16px;
+    font-weight: 600;
+    color: #B89B5E;
+    padding: 10px 20px;
+    margin: 0;
+}
+
+.product-card .btn-primary {
+    margin: 15px 20px 20px;
+    flex-grow: 1;
+}
+
+/* ============ PRODUCT DETAIL PAGE ============ */
+#product-detail-container {
+    padding: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    background: #F7F3EC;
+    padding: 40px;
+    border-radius: 10px;
+    border: 1px solid #D8CEC1;
+}
+
+.product-gallery {
+    position: relative;
+}
+
+.gallery-main {
+    position: relative;
+    width: 100%;
+    background: #FFF;
+    border-radius: 8px;
+    overflow: hidden;
+    aspect-ratio: 1;
+}
+
+.gallery-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #F7F3EC;
+    border: 2px solid #B8A894;
+    color: #2B211C;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 10;
+    font-weight: 700;
+}
+
+.gallery-btn:hover {
+    background: #B8A894;
+    color: #FFF;
+}
+
+.gallery-btn.prev {
+    left: 20px;
+}
+
+.gallery-btn.next {
+    right: 20px;
+}
+
+.image-counter {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #FFF;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.product-info h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    margin: 0 0 10px;
+    color: #2B211C;
+    font-weight: 500;
+}
+
+.product-category {
+    font-size: 14px;
+    color: #6B5A4B;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0 0 15px;
+    font-weight: 600;
+}
+
+.product-info .product-price {
+    font-size: 28px;
+    font-weight: 700;
+    color: #B89B5E;
+    margin: 0 0 30px;
+    padding: 0;
+}
+
+.product-description {
+    margin: 30px 0;
+    padding: 20px 0;
+    border-top: 1px solid #D8CEC1;
+    border-bottom: 1px solid #D8CEC1;
+}
+
+.product-description h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    margin: 0 0 15px;
+    color: #2B211C;
+}
+
+.product-description p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #6B5A4B;
+    margin: 0;
+}
+
+.product-colors {
+    margin: 25px 0;
+}
+
+.product-colors h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    margin: 0 0 15px;
+    color: #2B211C;
+}
+
+.color-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.color-tag {
+    display: inline-block;
+    background: #E8E1D6;
+    border: 1px solid #B8A894;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    color: #2B211C;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.color-tag:hover {
+    background: #B8A894;
+    color: #FFF;
+}
+
+.product-actions {
+    margin: 30px 0;
+}
+
+.quantity-selector {
+    margin-bottom: 20px;
+}
+
+.quantity-selector label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #2B211C;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    border: 1px solid #D8CEC1;
+    border-radius: 5px;
+    width: fit-content;
+    background: #FFF;
+}
+
+.quantity-controls button {
+    background: none;
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    cursor: pointer;
+    color: #2B211C;
+    transition: background-color 0.3s ease;
+    font-weight: 700;
+}
+
+.quantity-controls button:hover {
+    background-color: #E8E1D6;
+}
+
+.quantity-controls input {
+    border: none;
+    width: 50px;
+    text-align: center;
+    font-size: 16px;
+    padding: 8px 5px;
+    color: #2B211C;
+    font-weight: 600;
+    background: #FFF;
+}
+
+.quantity-controls input::-webkit-outer-spin-button,
+.quantity-controls input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* ============ BUTTONS ============ */
+.btn-primary {
+    background-color: #3A2A22;
+    color: #F8F5F0;
+    border: none;
+    padding: 14px 28px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Inter', sans-serif;
+}
+
+.btn-primary:hover {
+    background-color: #2B211C;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary.btn-large {
+    width: 100%;
+    padding: 16px 28px;
+    font-size: 16px;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #2B211C;
+    border: 2px solid #B8A894;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Inter', sans-serif;
+    margin-top: 15px;
+    display: block;
+}
+
+.btn-secondary:hover {\n    background-color: #B8A894;\n    color: #FFF;\n}\n\n/* ============ CART PAGE ============ */\n#cart-container {\n    padding: 50px;\n    max-width: 1200px;\n    margin: 0 auto;\n}\n\n.empty-cart {\n    text-align: center;\n    padding: 100px 50px;\n    background: #F7F3EC;\n    border-radius: 10px;\n    border: 1px solid #D8CEC1;\n}\n\n.empty-cart h2 {\n    font-family: 'Cormorant Garamond', serif;\n    font-size: 36px;\n    margin: 0 0 15px;\n    color: #2B211C;\n}\n\n.empty-cart p {\n    font-size: 16px;\n    color: #6B5A4B;\n    margin: 0 0 30px;\n}\n\n.empty-cart .btn-primary {\n    display: inline-block;\n    text-decoration: none;\n}\n\n.cart-content {\n    display: grid;\n    grid-template-columns: 1fr 350px;\n    gap: 40px;\n}\n\n.cart-items {\n    background: #F7F3EC;\n    border: 1px solid #D8CEC1;\n    border-radius: 10px;\n    padding: 30px;\n}\n\n.cart-item {\n    display: grid;\n    grid-template-columns: 120px 1fr 150px 120px 50px;\n    gap: 20px;\n    align-items: center;\n    padding: 25px;\n    border-bottom: 1px solid #D8CEC1;\n    transition: background-color 0.3s ease;\n}\n\n.cart-item:hover {\n    background-color: #E8E1D6;\n}\n\n.cart-item:last-child {\n    border-bottom: none;\n}\n\n.cart-item-image {\n    width: 120px;\n    height: 120px;\n    border-radius: 8px;\n    overflow: hidden;\n    background: #FFF;\n}\n\n.cart-item-image img {\n    width: 100%;\n    height: 100%;\n    object-fit: cover;\n}\n\n.cart-item-info h3 {\n    font-family: 'Cormorant Garamond', serif;\n    font-size: 18px;\n    margin: 0 0 8px;\n    color: #2B211C;\n}\n\n.cart-item-category {\n    font-size: 12px;\n    color: #6B5A4B;\n    text-transform: uppercase;\n    margin: 0 0 5px;\n    letter-spacing: 1px;\n}\n\n.cart-item-price {\n    font-size: 14px;\n    color: #B89B5E;\n    font-weight: 600;\n    margin: 0;\n}\n\n.cart-item-quantity label {\n    display: block;\n    font-size: 12px;\n    color: #6B5A4B;\n    margin-bottom: 8px;\n    font-weight: 600;\n    text-transform: uppercase;\n}\n\n.cart-item-quantity .quantity-controls {\n    width: 100%;\n    max-width: 150px;\n}\n\n.cart-item-total p {\n    font-size: 16px;\n    font-weight: 700;\n    color: #B89B5E;\n    margin: 0;\n}\n\n.btn-remove {\n    background: none;\n    border: none;\n    color: #D9534F;\n    font-size: 18px;\n    cursor: pointer;\n    transition: color 0.3s ease;\n    padding: 8px;\n}\n\n.btn-remove:hover {\n    color: #C9302C;\n}\n\n.cart-summary {\n    background: #F7F3EC;\n    border: 1px solid #D8CEC1;\n    border-radius: 10px;\n    padding: 30px;\n    position: sticky;\n    top: 30px;\n    height: fit-content;\n}\n\n.summary-row {\n    display: flex;\n    justify-content: space-between;\n    padding: 15px 0;\n    border-bottom: 1px solid #D8CEC1;\n    font-size: 16px;\n    color: #6B5A4B;\n}\n\n.summary-row.total {\n    border: none;\n    font-size: 20px;\n    font-weight: 700;\n    color: #B89B5E;\n    padding: 20px 0;\n    margin-bottom: 20px;\n}\n\n.cart-summary .btn-primary,\n.cart-summary .btn-secondary {\n    width: 100%;\n    margin-bottom: 10px;\n}\n\n/* ============ SUMMER COLLECTION ============ */\n.summerCollection{\n    position: relative;\n    width: 100%;\n}\n\n.sc-img img{\n    width: 100%;\n}\n\n.sc-text{\n    position: absolute;\n    top: 200px;\n    left: 50px;\n    line-height: 50px;\n}\n\n.sc-text h1{\n    font-family: 'Cormorant Garamond', serif;\n    font-size: 80px;\n    font-weight: 500;\n    color: #2B211C;\n    margin-bottom: 60px;\n}\n\n.sc-text p{\n    width: 750px;\n    font-family: 'Inter', sans-serif;\n    font-size: 18px;\n    line-height: 1.8;\n    color: #5E5147;\n}\n\n.sc-text button{\n    margin-top: 20px;\n    padding: 20px 55px;\n    background: #4E342E;\n    color: #F8F5F0;\n    border: none;\n    font-family: 'Inter', sans-serif;\n    letter-spacing: 0.2em;\n    cursor: pointer;\n    transition: background 0.3s ease;\n}\n\n.sc-text button:hover {\n    background: #3A2A22;\n}\n\n/* ============ BEST SELLERS ============ */\n.best-sellers {\n    padding: 0 50px;\n}\n\n.bs-head h1{\n    margin-top: 40px;\n    margin-bottom: 40px;\n    text-align: center;\n    font-family: 'Cormorant Garamond', serif;\n    font-size: 30px;\n    color: #4E342E;\n}\n\n.bs-cards {\n    width: 100%;\n    display: grid;\n    grid-template-columns: 1fr 1fr 1fr 1fr;\n    gap: 20px;\n}\n\n.bs-cards img {\n    width: 100%;\n    margin-bottom: 15px;\n    cursor: pointer;\n    transition: transform 0.3s ease;\n}\n\n.bs-cards img:hover {\n    transform: scale(1.05);\n}\n\n.bs-cards p {\n    font-size: 15px;\n    line-height: 0.8;\n    font-family: 'Inter', sans-serif;\n    cursor: pointer;\n    color: #2B211C;\n    transition: color 0.3s ease;\n}\n\n.bs-cards p:hover {\n    color: #B89B5E;\n}\n\n/* ============ THE LOOK ============ */\n.the-look1, .the-look2{\n    display: grid;\n    grid-template-columns: 1fr 1fr;    \n}\n\n.the-look1 {\n    margin-top: 40px;\n}\n\n.the-look2{\n    margin-top: 0px;\n}\n\n.look-model1 img, .look-model2 img {\n    width: 100%;\n    max-height: 1200px;\n    height: 100%;\n}\n\n.look-content1, .look-content2 {\n    max-height: 1200px;\n    display: grid;\n    grid-template-rows: 1fr 5fr 2fr 1fr;\n    background-color: #EEEAE6;\n    text-align: center;\n}\n\n.product-slider1, .product-slider2 {\n    margin-top: 150px;\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n    padding: 0px 30px;\n}\n\n.product-card1 img, .product-card2 img {\n    width: 100%;\n    max-width: 400px;\n    text-align: center;\n}\n\n.tl1, .tl2 {\n    color: #4E342E;\n    font-weight: 500;\n    font-size: 50px;\n    font-family: 'Cormorant Garamond', serif;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.arrow-left1, .arrow-right1, .arrow-left2, .arrow-right2{\n    font-family: 'Cormorant Garamond', serif;\n    width: 48px;\n    height: 48px;\n    border-radius: 50%;\n    border: none;\n    background-color: #F8F5F0;\n    font-size: 40px;\n    cursor: pointer;\n    color: #2b211c;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding-bottom: 10px;\n    transition: all 0.3s ease;\n}\n\n.arrow-left1:hover, .arrow-right1:hover, .arrow-left2:hover, .arrow-right2:hover {\n    background-color: #B8A894;\n    color: #FFF;\n}\n\n.product-card1 h3, .product-card1 p, .product-card2 h3, .product-card2 p {\n    font-size: 20px;\n    font-family: 'Cormorant Garamond', serif;\n}\n\n.product-card1 h3, .product-card2 h3 {\n    margin-top: 40px;\n    margin-bottom: 0px;\n    color: #2B211C;\n}\n\n.product-card1 p, .product-card2 p {\n    margin: 0px auto; \n    padding-top: 10px;\n    color: #B29A86;\n}\n\n.view-btn1, .view-btn2 {\n    margin: auto;\n    width: 250px;\n    height: 65px;\n    font-size: 25px;\n    font-family: 'Cormorant Garamond', serif;  \n    background-color: transparent;\n    border: 1px solid #2B211C;\n    border-radius: 5px;\n    margin-bottom: 80px;\n    cursor: pointer;\n    transition: all 0.3s ease;\n}\n\n.view-btn1:hover, .view-btn2:hover {\n    background-color: #2B211C;\n    color: #F8F5F0;\n}\n\n/* ============ OUR STORY ============ */\n.our-story {\n    margin-top: 0px;\n    text-align: center;\n    padding: 0 200px;\n    padding-top: 90px;\n}\n\n.os-content h1{\n    font-size: 30px;\n    font-family: 'Cormorant Garamond', serif;\n    color: #4E342E;\n}\n\n.os-content p{\n    padding-top: 20px;\n    font-size: 20px;\n    font-family: 'Cormorant Garamond', serif;\n    color: #5E5147;\n    line-height: 1.8;\n}\n\n.os-img img {\n    padding-top: 50px;\n    max-width: 500px;\n    max-height: 600px;\n    width: 100%;\n    cursor: pointer;\n    transition: transform 0.3s ease;\n}\n\n.os-img img:hover {\n    transform: scale(1.05);\n}\n\n.os-discover{\n    font-size: 20px;\n    font-family: 'Cormorant Garamond', serif;\n    margin-top: 20px;\n    color: #B29A86;\n    cursor: pointer;\n    margin-bottom: 90px;\n    transition: color 0.3s ease;\n}\n\n.os-discover:hover {\n    color: #B89B5E;\n}\n\n/* ============ CONTACT & FOOTER ============ */\n.contact {\n    display: flex;\n    padding: 40px 80px;\n    color: #F8F5F0;\n    background-color: #4E342E;\n}\n\n.more-info {\n    display: flex;\n    gap: 50px;\n    text-align: left;\n    padding-left: 0px;\n}\n\n.more-info h1{\n    font-size: 25px;\n    font-family: 'Cormorant Garamond', serif;\n}\n\n.more-info ul{\n    list-style-type: none;\n    line-height: 3;\n    padding-left: 0px;\n}\n\n.more-info ul li{\n    font-size: 18px;\n    font-family: 'Cormorant Garamond', serif;\n}\n\n.more-info a {\n    text-decoration: none;\n    color: #F8F5F0;\n    transition: color 0.3s ease;\n}\n\n.more-info a:hover {\n    color: #B89B5E;\n}\n\n.subscribe {\n    width: 38%;\n    display: flex;\n    flex-direction: column;\n    padding-right: 90px;\n    margin-right: 0px;\n}\n\n.subscribe h1 {\n    font-family: 'Cormorant Garamond', serif;\n    font-weight: 400;\n    color: #F8F5F0;\n    font-size: 35px;\n    margin-bottom: 20px;\n}\n\n.subscribe p {\n    font-family: 'Cormorant Garamond', serif;\n    font-size: 18px;\n    line-height: 1.4;\n    max-width: 650px;\n}\n\n.subscribe-form {\n    margin-top: 10px;\n    display: flex;\n    align-items: center;\n    border-bottom: 1px solid rgba(248,245,240,0.8);\n    max-width: 620px;\n}\n\n.subscribe-form input {\n    flex: 1;\n    background: transparent;\n    border: none;\n    outline: none;\n    padding: 15px 0;\n    font-size: 18px;\n    font-family: 'Cormorant Garamond', serif;\n    color: #F8F5F0;\n}\n\n.subscribe-form input::placeholder {\n    color: #F8F5F0;\n}\n\n.subscribe-form button {\n    background: transparent;\n    border: none;\n    color: #F8F5F0;\n    font-size: 18px;\n    cursor: pointer;\n    transition: color 0.3s ease;\n}\n\n.subscribe-form button:hover {\n    color: #B89B5E;\n}\n\n.privacy-text {\n    margin-top: 35px;\n    font-size: 16px;\n    line-height: 1.6;\n}\n\n.privacy-text a {\n    color: #F8F5F0;\n    transition: color 0.3s ease;\n}\n\n.privacy-text a:hover {\n    color: #B89B5E;\n}\n\n.footer {\n    text-align: center;\n    padding: 10px 0;\n    color: #2B211C;\n    background-color: #F8F5F0;\n    border-top: 1px solid #D8CEC1;\n}\n\n/* ============ RESPONSIVE DESIGN ============ */\n/* iPad / Tablet responsive */\n@media (max-width: 1024px) {\n    header {\n        padding: 0 30px;\n        gap: 15px;\n        height: 120px;\n    }\n\n    header img {\n        max-width: 260px;\n    }\n\n    .head-left,\n    .head-right {\n        font-size: 16px;\n        gap: 25px;\n    }\n\n    .summerCollection {\n        overflow: hidden;\n    }\n\n    .sc-img img {\n        height: 650px;\n        object-fit: cover;\n        object-position: center;\n    }\n\n    .sc-text {\n        top: 120px;\n        left: 40px;\n        line-height: 1.2;\n    }\n\n    .sc-text h1 {\n        font-size: 60px;\n        margin-bottom: 35px;\n    }\n\n    .sc-text p {\n        width: 520px;\n        font-size: 16px;\n        line-height: 1.7;\n    }\n\n    .sc-text button {\n        padding: 18px 45px;\n        font-size: 14px;\n    }\n\n    .best-sellers {\n        padding: 0 30px;\n    }\n\n    .bs-cards {\n        grid-template-columns: 1fr 1fr;\n        gap: 25px;\n    }\n\n    #products-grid {\n        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));\n        gap: 20px;\n        padding: 30px;\n    }\n\n    .product-detail {\n        grid-template-columns: 1fr;\n        gap: 40px;\n    }\n\n    .cart-content {\n        grid-template-columns: 1fr;\n    }\n\n    .cart-summary {\n        position: static;\n    }\n\n    .cart-item {\n        grid-template-columns: 100px 1fr 100px;\n        gap: 15px;\n    }\n\n    .cart-item-quantity {\n        display: none;\n    }\n\n    .product-info h1 {\n        font-size: 36px;\n    }\n\n    .the-look1,\n    .the-look2 {\n        grid-template-columns: 1fr 1fr;\n    }\n\n    .look-model1 img,\n    .look-model2 img {\n        height: 850px;\n        object-fit: cover;\n    }\n\n    .look-content1,\n    .look-content2 {\n        height: 850px;\n        grid-template-rows: 1fr 4fr 1fr 1fr;\n    }\n\n    .tl1,\n    .tl2 {\n        font-size: 42px;\n    }\n\n    .product-slider1,\n    .product-slider2 {\n        margin-top: 60px;\n        padding: 0 20px;\n    }\n\n    .product-card1 img,\n    .product-card2 img {\n        max-width: 280px;\n    }\n\n    .view-btn1,\n    .view-btn2 {\n        width: 210px;\n        height: 58px;\n        font-size: 22px;\n        margin-bottom: 50px;\n    }\n\n    .our-story {\n        padding: 70px 80px 0;\n    }\n\n    .os-content p {\n        font-size: 18px;\n    }\n\n    .contact {\n        flex-direction: column;\n        padding: 40px 50px;\n    }\n\n    .subscribe {\n        width: 100%;\n        padding-right: 0;\n        margin-bottom: 35px;\n    }\n\n    .more-info {\n        width: 100%;\n        gap: 40px;\n        flex-wrap: wrap;\n    }\n}\n\n/* Smaller tablet / iPad portrait */\n@media (max-width: 768px) {\n    header {\n        height: auto;\n        padding: 25px 20px;\n        flex-direction: column;\n    }\n\n    .head-left,\n    .head-right {\n        justify-content: center;\n        flex-wrap: wrap;\n        gap: 20px;\n        font-size: 15px;\n    }\n\n    header img {\n        max-width: 220px;\n    }\n\n    .page-header {\n        padding: 40px 20px;\n    }\n\n    .page-header h1 {\n        font-size: 36px;\n    }\n\n    .sc-img img {\n        height: 600px;\n    }\n\n    .sc-text {\n        top: 90px;\n        left: 25px;\n        right: 25px;\n    }\n\n    .sc-text h1 {\n        font-size: 48px;\n        margin-bottom: 25px;\n    }\n\n    .sc-text p {\n        width: 100%;\n        font-size: 15px;\n    }\n\n    .bs-cards {\n        grid-template-columns: 1fr 1fr;\n    }\n\n    #products-grid {\n        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));\n        gap: 15px;\n        padding: 20px;\n    }\n\n    .product-card h3 {\n        font-size: 14px;\n    }\n\n    .product-price {\n        font-size: 14px;\n    }\n\n    #product-detail-container {\n        padding: 20px;\n    }\n\n    .product-detail {\n        padding: 20px;\n    }\n\n    .gallery-btn {\n        width: 40px;\n        height: 40px;\n        font-size: 18px;\n    }\n\n    .product-info h1 {\n        font-size: 28px;\n    }\n\n    .cart-item {\n        grid-template-columns: 80px 1fr;\n        gap: 10px;\n    }\n\n    .cart-item-image {\n        width: 80px;\n        height: 80px;\n        grid-column: span 2;\n    }\n\n    .cart-item-quantity,\n    .cart-item-total {\n        display: none;\n    }\n\n    .the-look1,\n    .the-look2 {\n        grid-template-columns: 1fr;\n    }\n\n    .look-model1,\n    .look-model2 {\n        order: 1;\n    }\n\n    .look-content1,\n    .look-content2 {\n        order: 2;\n        height: auto;\n        padding: 50px 20px;\n    }\n\n    .product-slider1,\n    .product-slider2 {\n        margin-top: 30px;\n    }\n\n    .product-card1 img,\n    .product-card2 img {\n        max-width: 260px;\n    }\n\n    .our-story {\n        padding: 60px 30px 0;\n    }\n\n    .contact {\n        padding: 35px 30px;\n    }\n\n    .more-info {\n        flex-direction: column;\n        gap: 20px;\n    }\n}\n
